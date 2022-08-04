@@ -13,4 +13,7 @@ with some_thing:
 
 ## Looking at examples
 
-* color_context_manager: `python color_context_manager.py -v` -- this runs a doc test to show what it expects
+The files have far more detail on usage and what they expect. The doc tests should show what is expected as well.
+
+* color_context_manager: `python color_context_manager.py -v` -- context manager that manages colors between classes (Dog and Bear)
+* forced_context_manager: `python forced_context_manager.py -v` -- context manager that forces usage with using the colors
