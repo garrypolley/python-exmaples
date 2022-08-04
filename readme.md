@@ -13,4 +13,5 @@ To run each example `cd` into the directory and run:
 2. `source ./.venv/bin/activate`
 3. Look at the readme in the folder on what to run
 
-* dunder_new: An example of a classes with a __new__ method.
+* dunder_new: classes with a __new__ method.
+* context_managers: examples of using context managers.
