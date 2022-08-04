@@ -5,7 +5,12 @@ the context manager to properly modify the class instances when inside the conte
 manager.
 """
 
-class ColorContextMixin:
+class ColorContextClassMixin(type):
+    @property
+    def color(cls):
+        return cls._color
+
+class ColorContextMixin(metaclass=ColorContextClassMixin):
     """
     Used to manage the color of the thing.
     """
@@ -35,6 +40,12 @@ class Bear(ColorContextMixin):
     def log_bear(self):
         print(f"The bear is {self.color}")
 
+
+class BearClass(ColorContextMixin):
+
+    @classmethod
+    def log_bear(cls):
+        print(f"The bear is {cls.color}")
 
 class Dog(ColorContextMixin):
 
@@ -94,6 +105,9 @@ class ColorContext:
     Traceback (most recent call last):
     ...
     AssertionError: Class is used outside the ColorContextManager
+    >>> with color_context(color="yellow"):
+    ...    BearClass.log_bear()
+    The bear is yellow
     """
     def __init__(self, color) -> None:
         self.color = color
