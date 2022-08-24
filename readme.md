@@ -15,3 +15,4 @@ To run each example `cd` into the directory and run:
 
 * dunder_new: classes with a __new__ method.
 * context_managers: examples of using context managers.
+* programming_patterns: examples of specific programming patterns.
