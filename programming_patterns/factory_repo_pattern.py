@@ -40,10 +40,8 @@ class SomePreferences:
 
 class FruitFactory:
     """
-    By changing the `worker_preference` on this class the underlying way to get a fruit changes
+    By changing the SomePreferences.worker_preference, we can change the source of Fruit
     """
-
-    worker_preference = "gas_station"
 
     @staticmethod
     def repo() -> GetFruitRepository:
